@@ -1,0 +1,15 @@
+{
+  "expo": {
+   "name": "Calculator",
+   "icon": "",
+   "version": "1.0.0",
+   "slug": "calculator",
+   "sdkVersion": "27.0.0",
+   "ios": {
+     "bundleIdentifier": "laadi"
+   },
+   "android": {
+     "package": "com.yourcompany.yourappname"
+   }
+  }
+}

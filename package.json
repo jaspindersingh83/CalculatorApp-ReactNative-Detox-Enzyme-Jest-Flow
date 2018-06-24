@@ -1,0 +1,53 @@
+{
+  "name": "calculator",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "detox": "^7.4.3",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-react-16-adapter-setup": "^0.1.0",
+    "enzyme-to-json": "^3.3.4",
+    "flow-bin": "0.56.0",
+    "jest-expo": "~27.0.0",
+    "react-addons-test-utils": "^15.6.2",
+    "react-dom": "^16.4.1",
+    "react-native-mock": "^0.3.1",
+    "react-test-renderer": "^16.4.1"
+  },
+  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "scripts": {
+    "start": "react-native-scripts start",
+    "eject": "react-native-scripts eject",
+    "android": "react-native-scripts android",
+    "ios": "react-native-scripts ios",
+    "test": "jest",
+    "flow": "flow"
+  },
+  "jest": {
+    "preset": "react-native",
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "setupFiles": [
+      "<rootDir>/setupTests.js"
+    ]
+  },
+  "dependencies": {
+    "expo": "^27.0.1",
+    "react": "^16.4.1",
+    "react-native": "^0.55.4",
+    "react-navigation": "^2.4.1"
+  },
+  "detox": {
+    "configurations": {
+      "ios.sim.debug": {
+        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/calculator.app",
+        "build": "xcodebuild -project ios/calculator.xcodeproj -scheme calculator -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+        "type": "ios.simulator",
+        "name": "iPhone 7",
+        "test-runner": "jest"
+      }
+    }
+  }
+}
